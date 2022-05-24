@@ -1,0 +1,48 @@
+flask harry
+
+
+first execute virtual environment using
+
+python -m venv env
+then env folder is created
+
+create a file app.py   
+
+
+
+
+
+
+database
+from flask import Flask, render_templates
+from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
+
+
+making a database class
+
+
+class "Name"(db.Model):
+	sno = db.Column(db.Integer, primary_key=True)
+	date_created = db.Column(db.DateTime, default=datetime.utcnow)
+
+
+to represent object representation in string format 
+def __repr__(self) -> str:
+	return f"{self.sno} - {self.title}"
+
+jinja2 used for loop and other purpose
+
+
+creating db in terminal
+python
+>>>from app import db
+>>>db.create_all()
+>>>exit()
+
+
+CRUD operation is mainly done in databases application
+create , read , update , delete
+
+
+
