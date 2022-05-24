@@ -26,7 +26,6 @@
   <div class="container my-3">
     <h2>Yours Todo</h2>
     
-      <tbody>
         {% if allTodo|length==0 %}
         <div class="alert alert-dark" role="alert">
           No Todos found. Add your first todo now!
@@ -43,8 +42,9 @@
                 <th scope="col">Actions</th>
               </tr>
             </thead>
-          </tbody>
+         
         {% for todo in allTodo %}
+        <tbody>
         <tr>
           <th scope="row">{{loop.index}}</th>
           <td>{{todo.title}}</td>
@@ -56,8 +56,11 @@
           
           </td>
         </tr>
+        
           
         {% endfor %}
+        </tbody>
+        </table>
         {% endif %}
         
     
